@@ -1,1 +1,165 @@
-<h1>wilkomen</h1>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montadeus | Montaż mebli i naprawy domowe w Berlinie</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --light: #f4f7f6;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
+        .logo span { color: var(--accent); }
+
+        nav a { text-decoration: none; color: var(--primary); margin-left: 20px; font-weight: 500; }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('https://images.unsplash.com/photo-1581781894506-7a6907887395?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #d35400; }
+
+        .services { padding: 4rem 5%; background: var(--light); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .service-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
+
+        .contact-section { padding: 4rem 5%; }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
+
+        footer { background: var(--primary); color: white; padding: 2rem 5%; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">MONTA<span>DEUS</span></div>
+    <nav>
+        <a href="#uslugi">Usługi</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="tel:+491781439651" class="btn">Zadzwoń</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Profesjonalny Montaż Mebli w Berlinie</h1>
+    <p>Szybka, czysta i niezawodna pomoc w Twoim domu.</p>
+    <br>
+    <a href="https://wa.me/491781439651" class="btn"><i class="fab fa-whatsapp"></i> Napisz na WhatsApp</a>
+</section>
+
+<section id="uslugi" class="services">
+    <h2 style="text-align: center;">W czym mogę pomóc?</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>Montaż Mebli</h3>
+            <p>Szafy, łóżka, biurka i regały. Składam meble wszystkich popularnych marek.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-dolly"></i>
+            <h3>Demontaż i Przenoszenie</h3>
+            <p>Bezpieczne rozkręcanie i ponowny montaż mebli podczas przeprowadzek.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-paint-roller"></i>
+            <h3>Odświeżanie wnętrz</h3>
+            <p>Malowanie ścian, poprawki i drobne prace dekoracyjne.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-hammer"></i>
+            <h3>Drobne Naprawy</h3>
+            <p>Wymiana żarówek, montaż karniszy, obrazów i inne złota rączka.</p>
+        </div>
+    </div>
+</section>
+
+<section id="kontakt" class="contact-section">
+    <div class="contact-container">
+        <div>
+            <h2>Skontaktuj się ze mną</h2>
+            <p>Wyślij krótki opis lub zdjęcia prac, które chcesz wykonać. Odpiszę najszybciej jak to możliwe.</p>
+            <p><i class="fas fa-phone-alt"></i> +49 1781439651</p>
+            <p><i class="fas fa-envelope"></i> kontakt@montadeus.de</p>
+            <p><i class="fas fa-map-marker-alt"></i> Berlin, Niemcy</p>
+        </div>
+        <div class="service-card">
+            <h3>Szybka wycena</h3>
+            <p>Skorzystaj z bezpośredniego kontaktu telefonicznego lub przez WhatsApp, aby uzyskać natychmiastową wycenę.</p>
+            <a href="tel:+491781439651" class="btn" style="display: block; margin-top: 10px;">Zadzwoń teraz</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Montadeus. Wszystkie prawa zastrzeżone.</p>
+</footer>
+
+</body>
+</html>
