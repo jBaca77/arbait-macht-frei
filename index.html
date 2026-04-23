@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montadeus | Profesjonalny Montaż Mebli Berlin</title>
+    <title>Montadeus | Montaż Mebli & Terminarz Online</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a1a; /* Głęboka czerń */
-            --accent: #ff6b6b; /* Dynamiczny czerwony/koralowy */
+            --primary: #1a1a1a;
+            --accent: #ff6b6b;
             --accent-dark: #ee5253;
             --bg-light: #ffffff;
             --bg-grey: #f9f9f9;
@@ -19,21 +19,10 @@
             --transition: all 0.3s ease;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text-main); scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            overflow-x: hidden;
-        }
-
-        /* --- Nawigacja --- */
+        /* Navigation */
         header {
             background: rgba(255, 255, 255, 0.95);
             padding: 1rem 10%;
@@ -48,206 +37,73 @@
             backdrop-filter: blur(5px);
         }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -1px;
-        }
+        .logo { font-weight: 700; font-size: 1.8rem; color: var(--primary); text-decoration: none; letter-spacing: -1px; }
         .logo span { color: var(--accent); }
-
         nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
-        nav a {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 400;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
+        nav a { text-decoration: none; color: var(--primary); font-size: 0.95rem; transition: var(--transition); }
         nav a:hover { color: var(--accent); }
+        .btn-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; }
 
-        .btn-nav {
-            background: var(--primary);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-        }
-        .btn-nav:hover { background: var(--accent); color: white; transform: translateY(-2px); }
-
-        /* --- Sekcja Hero --- */
+        /* Hero Section */
         .hero {
-            height: 100vh;
+            height: 90vh;
             display: flex;
             align-items: center;
             padding: 0 10%;
-            margin-top: 80px; /* wysokość headera */
+            margin-top: 80px;
             background: var(--bg-grey);
             position: relative;
         }
-
         .hero-content { flex: 1; max-width: 600px; z-index: 10; }
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            line-height: 1.1;
-            color: var(--primary);
-            margin-bottom: 20px;
-            letter-spacing: -2px;
-        }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 20px; }
         .hero h1 span { color: var(--accent); }
-        .hero p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-
+        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px; }
         .hero-btns { display: flex; gap: 20px; }
-        
-        .btn-main, .btn-sec {
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .btn-main { background: var(--accent); color: white; box-shadow: 0 10px 20px rgba(255,107,107,0.2); }
-        .btn-main:hover { background: var(--accent-dark); transform: translateY(-3px); }
-        
-        .btn-sec { background: white; color: var(--primary); border: 1px solid #ddd; }
-        .btn-sec:hover { background: var(--bg-grey); border-color: #bbb; }
+        .btn-main { background: var(--accent); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 10px 20px rgba(255,107,107,0.2); }
+        .btn-main:hover { transform: translateY(-3px); background: var(--accent-dark); }
+        .hero-image { flex: 1; height: 100%; background: url('https://images.unsplash.com/photo-1581781894506-7a6907887395?q=80&w=1470&auto=format&fit=crop') center/cover; position: absolute; right: 0; top: 0; width: 45%; border-bottom-left-radius: 100px; }
 
-        .hero-image {
-            flex: 1;
-            height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1595814138038-f9b7c6c4c66b?q=80&w=1470&auto=format&fit=crop'); /* Wysoka jakość, nowoczesne wnętrze */
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 45%;
-            border-bottom-left-radius: 100px;
-        }
-
-        /* --- Sekcja Usługi --- */
-        .services { padding: 100px 10%; background: var(--bg-light); }
-        
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header span { color: var(--accent); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
-        .section-header h2 { font-size: 2.8rem; font-weight: 700; color: var(--primary); margin-top: 10px; letter-spacing: -1px; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
+        /* Calendar Section */
+        .calendar-section { padding: 100px 10%; background: white; text-align: center; }
+        .calendar-container {
+            max-width: 900px;
+            margin: 50px auto 0;
             background: var(--bg-grey);
-            padding: 50px;
+            padding: 20px;
             border-radius: 20px;
-            transition: var(--transition);
-            border: 1px solid transparent;
-        }
-        .service-card:hover {
-            background: white;
-            border-color: #eee;
             box-shadow: var(--shadow);
-            transform: translateY(-5px);
+            border: 1px solid #eee;
         }
-
-        .icon-box {
-            width: 70px;
-            height: 70px;
-            background: white;
+        /* Miejsce na Twój widget (np. Calendly, Google Calendar) */
+        .calendar-placeholder {
+            width: 100%;
+            height: 600px;
+            background: #fff;
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            color: var(--accent);
-            font-size: 1.8rem;
-        }
-
-        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
-        .service-card p { color: var(--text-muted); font-size: 0.95rem; font-weight: 300; }
-
-        /* --- Sekcja Kontakt/CTA --- */
-        .cta-section {
-            background: var(--primary);
-            color: white;
-            padding: 100px 10%;
-            text-align: center;
-            position: relative;
+            color: #ccc;
             overflow: hidden;
         }
-        
-        .cta-section h2 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px;}
-        .cta-section p { font-size: 1.2rem; font-weight: 300; opacity: 0.8; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .contact-method-card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px 50px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: var(--transition);
-            text-decoration: none;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .contact-method-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
-        .contact-method-card i { font-size: 1.5rem; color: var(--accent); }
-        .contact-method-card span { font-weight: 600; font-size: 1.1rem; }
+        /* Services Grid */
+        .services { padding: 100px 10%; background: var(--bg-grey); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.8rem; letter-spacing: -1px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: white; padding: 40px; border-radius: 20px; transition: var(--transition); }
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .icon-box { font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
 
-        /* --- Stopka --- */
-        footer {
-            background: var(--bg-grey);
-            padding: 50px 10%;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
-
-        /* --- Responsywność --- */
-        @media (max-width: 1200px) {
-            .hero h1 { font-size: 3.2rem; }
-            .hero-image { width: 40%; }
-        }
+        footer { background: var(--primary); color: white; padding: 50px 10%; text-align: center; }
 
         @media (max-width: 992px) {
-            header { padding: 1rem 5%; }
-            nav ul { gap: 15px; }
-            .hero { flex-direction: column-reverse; text-align: center; height: auto; padding: 100px 5% 50px; }
-            .hero-image { position: relative; width: 100%; height: 300px; border-radius: 20px; margin-bottom: 50px; right: auto; top: auto; }
-            .hero-content { max-width: 100%; }
-            .hero h1 { font-size: 2.8rem; }
+            .hero { flex-direction: column-reverse; text-align: center; height: auto; padding: 100px 5%; }
+            .hero-image { position: relative; width: 100%; height: 300px; border-radius: 20px; margin-bottom: 30px; }
+            .hero h1 { font-size: 2.5rem; }
             .hero-btns { justify-content: center; }
-            .services, .cta-section, footer { padding-left: 5%; padding-right: 5%; }
-        }
-
-        @media (max-width: 768px) {
-            nav ul { display: none; } /* Uproszczenie dla mobile */
-            .hero h1 { font-size: 2.2rem; }
-            .section-header h2 { font-size: 2.2rem; }
-            .cta-section h2 { font-size: 2.2rem; }
-            .service-card { padding: 30px; }
+            .calendar-section, .services { padding: 60px 5%; }
         }
     </style>
 </head>
@@ -258,88 +114,65 @@
     <nav>
         <ul>
             <li><a href="#uslugi">Usługi</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="tel:+491781439651" class="btn-nav"><i class="fas fa-phone-alt"></i> Zadzwoń</a></li>
+            <li><a href="#terminarz">Zarezerwuj termin</a></li>
+            <li><a href="tel:+491781439651" class="btn-nav">Zadzwoń</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Wygodny Dom,<br><span>Bez Wysiłku.</span></h1>
-        <p>Profesjonalny montaż mebli, drobne naprawy i odświeżanie wnętrz w Berlinie. Czysto, szybko i zawsze na czas.</p>
+        <h1>Montaż mebli?<br><span>Sprawdź wolne daty.</span></h1>
+        <p>Nowoczesne podejście do usług serwisowych w Berlinie. Podgląd terminów online i błyskawiczna rezerwacja.</p>
         <div class="hero-btns">
-            <a href="https://wa.me/491781439651" class="btn-main"><i class="fab fa-whatsapp"></i> Wycena WhatsApp</a>
-            <a href="#uslugi" class="btn-sec">Zobacz usługi</a>
+            <a href="#terminarz" class="btn-main"><i class="far fa-calendar-alt"></i> Zobacz dostępność</a>
         </div>
     </div>
     <div class="hero-image"></div>
 </section>
 
-<section id="uslugi" class="services">
+<section id="terminarz" class="calendar-section">
     <div class="section-header">
-        <span>Moja Oferta</span>
-        <h2>Kompleksowa Pomoc w Domu</h2>
+        <h2>Rezerwacja Online</h2>
+        <p>Wybierz dogodny dzień i godzinę. Potwierdzenie otrzymasz SMS-em.</p>
     </div>
-    
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="icon-box">
-                <i class="fas fa-couch"></i>
-            </div>
-            <h3>Montaż Mebli</h3>
-            <p>Od płaskich paczek IKEA po skomplikowane systemy szaf. Składam precyzyjnie i solidnie.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="icon-box">
-                <i class="fas fa-exchange-alt"></i>
-            </div>
-            <h3>Demontaż</h3>
-            <p>Przeprowadzka? Szybko i bezpiecznie rozkręcę Twoje meble, gotowe do transportu.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="icon-box">
-                <i class="fas fa-paint-roller"></i>
-            </div>
-            <h3>Malowanie</h3>
-            <p>Odświeżenie jednego pokoju lub całego mieszkania. Czyste krawędzie, wysoka jakość.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="icon-box">
-                <i class="fas fa-hammer"></i>
-            </div>
-            <h3>Złota Rączka</h3>
-            <p>Wymiana lampy, montaż karnisza, wieszanie obrazów – drobne prace, które robią różnicę.</p>
+    <div class="calendar-container">
+        <div class="calendar-placeholder">
+            <iframe src="https://calendar.google.com/calendar/embed?src=j.nieweglowski96%40gmail.com&ctz=Europe%2FWarsaw" 
+                    style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 </section>
 
-<section id="kontakt" class="cta-section">
-    <h2>Gotowy na Zmiany?</h2>
-    <p>Skontaktuj się ze mną, aby otrzymać szybką i darmową wycenę Twojego projektu w Berlinie.</p>
-    
-    <div class="contact-methods">
-        <a href="https://wa.me/491781439651" class="contact-method-card">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-        <a href="tel:+491781439651" class="contact-method-card">
-            <i class="fas fa-phone-alt"></i>
-            <span>+49 1781439651</span>
-        </a>
-        <a href="mailto:kontakt@montadeus.de" class="contact-method-card">
-            <i class="fas fa-envelope"></i>
-            <span>kontakt@montadeus.de</span>
-        </a>
+<section id="uslugi" class="services">
+    <div class="section-header">
+        <h2>Profesjonalne Usługi</h2>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon-box"><i class="fas fa-box-open"></i></div>
+            <h3>Montaż Mebli</h3>
+            <p>IKEA, Amazon, i inne. Solidne składanie szaf, łóżek i kuchni.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon-box"><i class="fas fa-tools"></i></div>
+            <h3>Naprawy Domowe</h3>
+            <p>Wymiana oświetlenia, wieszanie TV, drobne usterki techniczne.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon-box"><i class="fas fa-brush"></i></div>
+            <h3>Malowanie</h3>
+            <p>Odświeżanie ścian i sufitów. Szybko, czysto i bez smug.</p>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Montadeus. Wszystkie prawa zastrzeżone.</p>
-    <p style="font-size: 0.8rem; margin-top: 10px;">Furniture Assembly & Home Repair | Berlin, Germany</p>
+    <p>&copy; 2026 Montadeus. Berlin, Niemcy.</p>
+    <div style="margin-top: 15px; font-size: 1.2rem;">
+        <a href="https://wa.me/491781439651" style="color: #25D366; margin: 0 10px;"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+491781439651" style="color: white; margin: 0 10px;"><i class="fas fa-phone"></i></a>
+    </div>
 </footer>
 
 </body>
